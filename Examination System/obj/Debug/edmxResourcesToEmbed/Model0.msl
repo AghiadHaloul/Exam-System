@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Examination_SystemEntities2">
+    <EntitySetMapping Name="Exams">
+      <EntityTypeMapping TypeName="Model.Exam">
+        <MappingFragment StoreEntitySet="Exam">
+          <ScalarProperty Name="Exam_Name" ColumnName="Exam Name" />
+          <ScalarProperty Name="Number_Of_Questions" ColumnName="Number Of Questions" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Total_Score" ColumnName="Total Score" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Questions">
+      <EntityTypeMapping TypeName="Model.Question">
+        <MappingFragment StoreEntitySet="Question">
+          <ScalarProperty Name="Exam_Name" ColumnName="Exam Name" />
+          <ScalarProperty Name="Question_Text" ColumnName="Question Text" />
+          <ScalarProperty Name="Question_Score" ColumnName="Question Score" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="mcq_Choice_1" ColumnName="mcq Choice 1" />
+          <ScalarProperty Name="mcq_Choice_2" ColumnName="mcq Choice 2" />
+          <ScalarProperty Name="mcq_Choice_3" ColumnName="mcq Choice 3" />
+          <ScalarProperty Name="mcq_Choice_4" ColumnName="mcq Choice 4" />
+          <ScalarProperty Name="Correct_Answer" ColumnName="Correct Answer" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reportsTables">
+      <EntityTypeMapping TypeName="Model.reportsTable">
+        <MappingFragment StoreEntitySet="reportsTable">
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="examName" ColumnName="examName" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="score" ColumnName="score" />
+          <ScalarProperty Name="totalscore" ColumnName="totalscore" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="Model.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="First_Name" ColumnName="First Name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last Name" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teachers">
+      <EntityTypeMapping TypeName="Model.Teacher">
+        <MappingFragment StoreEntitySet="Teacher">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="First_Name" ColumnName="First Name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last Name" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

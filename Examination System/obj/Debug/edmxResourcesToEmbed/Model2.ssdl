@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Exam">
+    <Key>
+      <PropertyRef Name="Exam Name" />
+    </Key>
+    <Property Name="Exam Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Number Of Questions" Type="int" Nullable="false" />
+    <Property Name="Duration" Type="float" Nullable="false" />
+    <Property Name="Total Score" Type="float" Nullable="false" />
+    <Property Name="examID" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Question">
+    <Key>
+      <PropertyRef Name="Question Text" />
+    </Key>
+    <Property Name="Exam Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Question Text" Type="nvarchar" MaxLength="400" Nullable="false" />
+    <Property Name="Question Score" Type="float" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="mcq Choice 1" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="mcq Choice 2" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="mcq Choice 3" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="mcq Choice 4" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Correct Answer" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="reportsTable">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="studentID" Type="nchar" MaxLength="30" Nullable="false" />
+    <Property Name="examName" Type="nchar" MaxLength="30" Nullable="false" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="score" Type="float" Nullable="false" />
+    <Property Name="totalScore" Type="float" Nullable="false" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="Username" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="First Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Last Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Year" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Teacher">
+    <Key>
+      <PropertyRef Name="Username" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="First Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Last Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Department" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="Exam" EntityType="Self.Exam" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Question" EntityType="Self.Question" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="reportsTable" EntityType="Self.reportsTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Teacher" EntityType="Self.Teacher" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
